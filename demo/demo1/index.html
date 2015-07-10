@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css3动画demo1</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimal-ui">
+	<style type="text/css">
+	body,ul,li,article,section,a,p,div,header,footer{margin:0;padding:0;}
+	li{list-style: none}
+	a{text-decoration:none;}
+	.container{height:100%;width: 100%;background:#85CE0A;position: absolute;top:0;left:0;
+		-webkit-animation:load 0.6s ease-in;}
+	.pos-a{position:absolute;left: 50%;top:50%;overflow: hidden;}
+	.logo{
+		width: 320px;
+		height: 105px;
+		margin-left:-160px;
+		margin-top: -240px;
+		text-align: center;
+		color: #fff;
+		-webkit-animation:logo 0.6s linear 0.5s;
+	}
+	.logo h1{
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+		border:3px solid #fff;
+		border-radius:10%;
+		line-height: 60px;
+	}
+	.logo p{
+		padding-top: 10px;
+	}
+	.ad-img{
+	  width: 320px;
+	  height: 232px;
+	  margin-left: -160px;
+	  margin-top: -110px;
+	}
+	.img-warp li{
+		border-radius: 10%;
+		color: #fff;
+		font-size: 18px;
+		text-align: center;
+		line-height: 200px;
+	}
+	.ad-img1{
+		width: 124px;
+		height: 232px;
+		top: 0;
+		margin-left: -62px;
+		background-color: #506C21;
+		z-index: 9;
+	}
+	.ad-img2{
+		width: 102px;
+		height: 212px;
+		top: 12px;
+		margin-left: -128px;
+		background-color: #7E9E47;
+		-webkit-animation:adimg_2 0.8s linear 1s backwards;
+
+		
+	}
+	.ad-img3{
+		width: 102px;
+		height: 212px;
+		top: 12px;
+		margin-left: 23px;
+		background-color: #7E9E47;
+		-webkit-animation:adimg_3 1s linear 0.8s backwards;
+	}
+	.downWarp{
+		width: 320px;
+		height: 63px;
+		margin-top: 160px;
+		margin-left: -160px;
+		color: #fff;
+		text-align: center;
+	}
+	.downWarp p{
+		margin-bottom: 10px;
+	}
+	.down-btn{
+	  height: 35px;
+	  line-height: 35px;
+	  background: #fff;
+	  color: #49A5DD;
+	  font-size: 16px;
+	  display: block;
+	  width: 180px;
+	  margin: 0 auto;
+	  border-radius: 6px;
+	  -webkit-animation:btn 2s linear infinite 1s backwards;
+	}
+	.body-bg{
+		position: absolute;
+		bottom: 0;
+		height: 30px;
+		width: 100%;
+		display: -webkit-box;
+	}
+	.body-bg span{
+		display: block;
+		-webkit-box-flex:10;
+		height: 100%;
+		background-color: #fff;
+		border-radius:50% 50% 0 0;
+	}
+	@media screen and (min-width: 480px) { 
+		.ad-img{
+			margin-left: -250px;
+			margin-top: -116px;
+		}
+		.logo{
+			margin-left: -25px;
+			margin-top: -110px;
+		}
+		.downWarp{
+			margin-left: -28px;
+  			margin-top: 25px;
+		}
+	}
+
+	/*页面载入动画-背景*/
+	@-webkit-keyframes load{
+		0% {top:-100%;}
+		70% {top:-90%;}
+		100% {top:0;}
+	}
+	/*logo动画*/
+	@-webkit-keyframes logo{
+		0%{-webkit-transform:scale(0.1);}
+		50%{-webkit-transform:scale(1.2);}
+		70%{-webkit-transform:scale(0.8);}
+		100%{-webkit-transform:scale(1);}
+	}
+	/*广告图动画-背景*/
+	@-webkit-keyframes adimg_2{
+		0% {margin-left:-62px;}
+		100% {margin-left:-128px;}
+	}
+	@-webkit-keyframes adimg_3{
+		0% {margin-left:-62px;}
+		100% {margin-left:23px;}
+	}
+	/*下载按钮*/
+	@-webkit-keyframes btn { 
+	0% { 
+	-webkit-transform: scale(1); 
+	} 
+	
+	25% { 
+	-webkit-transform: scale(.95); 
+	} 
+	
+	50% { 
+	-webkit-transform: scale(1); 
+	} 
+	
+	75% { 
+	-webkit-transform: scale(1.05); 
+	} 
+	
+	100% { 
+	-webkit-transform: scale(1); 
+	} 
+	} 
+	</style>
+</head>
+<body>
+<article class="container">
+	<header class="logo pos-a">
+		<h1>logo</h1>
+		<p>巴拉巴拉巴拉</p>
+	</header>
+	<section class="ad-img pos-a">
+		<ul class="img-warp">
+			<li class="ad-img1 pos-a">图片1</li>
+			<li class="ad-img2 pos-a">图片2</li>
+			<li class="ad-img3 pos-a">图片3</li>
+		</ul>
+	</section>
+	<footer class="downWarp pos-a">
+		<div >
+			<p>大家快来下载啊</p>
+			<a href="#" class="down-btn">立即下载</a>
+		</div>
+	</footer>
+	<div class="body-bg">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</article>
+</body>
+</html>
